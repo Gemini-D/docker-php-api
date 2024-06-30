@@ -74,6 +74,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Ports', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Ports'] as $key => $value) {
+                    if ($value === null) {
+                        $values[$key] = null;
+                        continue;
+                    }
                     $values_1 = [];
                     foreach ($value as $value_1) {
                         $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\PortBinding', 'json', $context);
@@ -130,6 +134,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Networks', $data)) {
                 $values_4 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Networks'] as $key_1 => $value_4) {
+                    if ($value_4 === null) {
+                        $values_4[$key_1] = null;
+                        continue;
+                    }
                     $values_4[$key_1] = $this->denormalizer->denormalize($value_4, 'Docker\API\Model\EndpointSettings', 'json', $context);
                 }
                 $object->setNetworks($values_4);
@@ -276,6 +284,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Ports', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Ports'] as $key => $value) {
+                    if ($value === null) {
+                        $values[$key] = null;
+                        continue;
+                    }
                     $values_1 = [];
                     foreach ($value as $value_1) {
                         $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\PortBinding', 'json', $context);
@@ -332,6 +344,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Networks', $data)) {
                 $values_4 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Networks'] as $key_1 => $value_4) {
+                    if ($value_4 === null) {
+                        $values_4[$key_1] = null;
+                        continue;
+                    }
                     $values_4[$key_1] = $this->denormalizer->denormalize($value_4, 'Docker\API\Model\EndpointSettings', 'json', $context);
                 }
                 $object->setNetworks($values_4);

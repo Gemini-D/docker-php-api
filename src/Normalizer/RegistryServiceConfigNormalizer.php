@@ -80,6 +80,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('IndexConfigs', $data)) {
                 $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['IndexConfigs'] as $key => $value_3) {
+                    if ($value_3 === null) {
+                        $values_3[$key] = null;
+                        continue;
+                    }
                     $values_3[$key] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\IndexInfo', 'json', $context);
                 }
                 $object->setIndexConfigs($values_3);
@@ -200,6 +204,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('IndexConfigs', $data)) {
                 $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['IndexConfigs'] as $key => $value_3) {
+                    if ($value_3 === null) {
+                        $values_3[$key] = null;
+                        continue;
+                    }
                     $values_3[$key] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\IndexInfo', 'json', $context);
                 }
                 $object->setIndexConfigs($values_3);

@@ -105,6 +105,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('DriverOpts', $data) && $data['DriverOpts'] !== null) {
                 $values_2 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['DriverOpts'] as $key => $value_2) {
+                    if ($value_2 === null) {
+                        $values_2[$key] = null;
+                        continue;
+                    }
                     $values_2[$key] = $value_2;
                 }
                 $object->setDriverOpts($values_2);
@@ -261,6 +265,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('DriverOpts', $data) && $data['DriverOpts'] !== null) {
                 $values_2 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['DriverOpts'] as $key => $value_2) {
+                    if ($value_2 === null) {
+                        $values_2[$key] = null;
+                        continue;
+                    }
                     $values_2[$key] = $value_2;
                 }
                 $object->setDriverOpts($values_2);

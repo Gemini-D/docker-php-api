@@ -77,6 +77,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('ExposedPorts', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['ExposedPorts'] as $key => $value) {
+                    if ($value === null) {
+                        $values[$key] = null;
+                        continue;
+                    }
                     $values[$key] = $value;
                 }
                 $object->setExposedPorts($values);
@@ -116,6 +120,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Volumes', $data)) {
                 $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Volumes'] as $key_1 => $value_3) {
+                    if ($value_3 === null) {
+                        $values_3[$key_1] = null;
+                        continue;
+                    }
                     $values_3[$key_1] = $value_3;
                 }
                 $object->setVolumes($values_3);
@@ -146,6 +154,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Labels', $data)) {
                 $values_6 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Labels'] as $key_2 => $value_6) {
+                    if ($value_6 === null) {
+                        $values_6[$key_2] = null;
+                        continue;
+                    }
                     $values_6[$key_2] = $value_6;
                 }
                 $object->setLabels($values_6);
@@ -353,6 +365,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('ExposedPorts', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['ExposedPorts'] as $key => $value) {
+                    if ($value === null) {
+                        $values[$key] = null;
+                        continue;
+                    }
                     $values[$key] = $value;
                 }
                 $object->setExposedPorts($values);
@@ -392,6 +408,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Volumes', $data)) {
                 $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Volumes'] as $key_1 => $value_3) {
+                    if ($value_3 === null) {
+                        $values_3[$key_1] = null;
+                        continue;
+                    }
                     $values_3[$key_1] = $value_3;
                 }
                 $object->setVolumes($values_3);
@@ -422,6 +442,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Labels', $data)) {
                 $values_6 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Labels'] as $key_2 => $value_6) {
+                    if ($value_6 === null) {
+                        $values_6[$key_2] = null;
+                        continue;
+                    }
                     $values_6[$key_2] = $value_6;
                 }
                 $object->setLabels($values_6);

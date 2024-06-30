@@ -226,6 +226,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Runtimes', $data)) {
                 $values_6 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Runtimes'] as $key => $value_6) {
+                    if ($value_6 === null) {
+                        $values_6[$key] = null;
+                        continue;
+                    }
                     $values_6[$key] = $this->denormalizer->denormalize($value_6, 'Docker\API\Model\Runtime', 'json', $context);
                 }
                 $object->setRuntimes($values_6);
@@ -684,6 +688,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Runtimes', $data)) {
                 $values_6 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Runtimes'] as $key => $value_6) {
+                    if ($value_6 === null) {
+                        $values_6[$key] = null;
+                        continue;
+                    }
                     $values_6[$key] = $this->denormalizer->denormalize($value_6, 'Docker\API\Model\Runtime', 'json', $context);
                 }
                 $object->setRuntimes($values_6);

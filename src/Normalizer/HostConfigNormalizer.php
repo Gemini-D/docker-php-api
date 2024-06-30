@@ -197,6 +197,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('PortBindings', $data)) {
                 $values_9 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['PortBindings'] as $key => $value_9) {
+                    if ($value_9 === null) {
+                        $values_9[$key] = null;
+                        continue;
+                    }
                     $values_10 = [];
                     foreach ($value_9 as $value_10) {
                         $values_10[] = $this->denormalizer->denormalize($value_10, 'Docker\API\Model\PortBinding', 'json', $context);
@@ -315,6 +319,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('StorageOpt', $data)) {
                 $values_22 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['StorageOpt'] as $key_1 => $value_22) {
+                    if ($value_22 === null) {
+                        $values_22[$key_1] = null;
+                        continue;
+                    }
                     $values_22[$key_1] = $value_22;
                 }
                 $object->setStorageOpt($values_22);
@@ -322,6 +330,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Tmpfs', $data)) {
                 $values_23 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Tmpfs'] as $key_2 => $value_23) {
+                    if ($value_23 === null) {
+                        $values_23[$key_2] = null;
+                        continue;
+                    }
                     $values_23[$key_2] = $value_23;
                 }
                 $object->setTmpfs($values_23);
@@ -338,6 +350,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Sysctls', $data)) {
                 $values_24 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Sysctls'] as $key_3 => $value_24) {
+                    if ($value_24 === null) {
+                        $values_24[$key_3] = null;
+                        continue;
+                    }
                     $values_24[$key_3] = $value_24;
                 }
                 $object->setSysctls($values_24);
@@ -845,6 +861,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('PortBindings', $data)) {
                 $values_9 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['PortBindings'] as $key => $value_9) {
+                    if ($value_9 === null) {
+                        $values_9[$key] = null;
+                        continue;
+                    }
                     $values_10 = [];
                     foreach ($value_9 as $value_10) {
                         $values_10[] = $this->denormalizer->denormalize($value_10, 'Docker\API\Model\PortBinding', 'json', $context);
@@ -963,6 +983,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('StorageOpt', $data)) {
                 $values_22 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['StorageOpt'] as $key_1 => $value_22) {
+                    if ($value_22 === null) {
+                        $values_22[$key_1] = null;
+                        continue;
+                    }
                     $values_22[$key_1] = $value_22;
                 }
                 $object->setStorageOpt($values_22);
@@ -970,6 +994,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Tmpfs', $data)) {
                 $values_23 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Tmpfs'] as $key_2 => $value_23) {
+                    if ($value_23 === null) {
+                        $values_23[$key_2] = null;
+                        continue;
+                    }
                     $values_23[$key_2] = $value_23;
                 }
                 $object->setTmpfs($values_23);
@@ -986,6 +1014,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             if (array_key_exists('Sysctls', $data)) {
                 $values_24 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                 foreach ($data['Sysctls'] as $key_3 => $value_24) {
+                    if ($value_24 === null) {
+                        $values_24[$key_3] = null;
+                        continue;
+                    }
                     $values_24[$key_3] = $value_24;
                 }
                 $object->setSysctls($values_24);

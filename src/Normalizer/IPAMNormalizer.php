@@ -64,6 +64,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
                 foreach ($data['Config'] as $value) {
                     $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                     foreach ($value as $key => $value_1) {
+                        if ($value_1 === null) {
+                            $values_1[$key] = null;
+                            continue;
+                        }
                         $values_1[$key] = $value_1;
                     }
                     $values[] = $values_1;
@@ -75,6 +79,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
                 foreach ($data['Options'] as $value_2) {
                     $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                     foreach ($value_2 as $key_1 => $value_3) {
+                        if ($value_3 === null) {
+                            $values_3[$key_1] = null;
+                            continue;
+                        }
                         $values_3[$key_1] = $value_3;
                     }
                     $values_2[] = $values_3;
@@ -164,6 +172,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
                 foreach ($data['Config'] as $value) {
                     $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                     foreach ($value as $key => $value_1) {
+                        if ($value_1 === null) {
+                            $values_1[$key] = null;
+                            continue;
+                        }
                         $values_1[$key] = $value_1;
                     }
                     $values[] = $values_1;
@@ -175,6 +187,10 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
                 foreach ($data['Options'] as $value_2) {
                     $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
                     foreach ($value_2 as $key_1 => $value_3) {
+                        if ($value_3 === null) {
+                            $values_3[$key_1] = null;
+                            continue;
+                        }
                         $values_3[$key_1] = $value_3;
                     }
                     $values_2[] = $values_3;
