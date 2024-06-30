@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key => $value) {
+                foreach ($data['Labels'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -72,7 +72,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Plugins', $data)) {
                 $values_1 = [];
-                foreach ($data['Plugins'] as $value_1) {
+                foreach ($data['Plugins'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\EngineDescriptionPluginsItem', 'json', $context);
                 }
                 $object->setPlugins($values_1);
@@ -149,7 +149,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key => $value) {
+                foreach ($data['Labels'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -160,7 +160,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Plugins', $data)) {
                 $values_1 = [];
-                foreach ($data['Plugins'] as $value_1) {
+                foreach ($data['Plugins'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\EngineDescriptionPluginsItem', 'json', $context);
                 }
                 $object->setPlugins($values_1);

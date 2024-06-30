@@ -61,9 +61,9 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Config', $data)) {
                 $values = [];
-                foreach ($data['Config'] as $value) {
+                foreach ($data['Config'] ?? [] as $value) {
                     $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                    foreach ($value as $key => $value_1) {
+                    foreach ($value ?? [] as $key => $value_1) {
                         if ($value_1 === null) {
                             $values_1[$key] = null;
                             continue;
@@ -76,9 +76,9 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Options', $data)) {
                 $values_2 = [];
-                foreach ($data['Options'] as $value_2) {
+                foreach ($data['Options'] ?? [] as $value_2) {
                     $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                    foreach ($value_2 as $key_1 => $value_3) {
+                    foreach ($value_2 ?? [] as $key_1 => $value_3) {
                         if ($value_3 === null) {
                             $values_3[$key_1] = null;
                             continue;
@@ -169,9 +169,9 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Config', $data)) {
                 $values = [];
-                foreach ($data['Config'] as $value) {
+                foreach ($data['Config'] ?? [] as $value) {
                     $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                    foreach ($value as $key => $value_1) {
+                    foreach ($value ?? [] as $key => $value_1) {
                         if ($value_1 === null) {
                             $values_1[$key] = null;
                             continue;
@@ -184,9 +184,9 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Options', $data)) {
                 $values_2 = [];
-                foreach ($data['Options'] as $value_2) {
+                foreach ($data['Options'] ?? [] as $value_2) {
                     $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                    foreach ($value_2 as $key_1 => $value_3) {
+                    foreach ($value_2 ?? [] as $key_1 => $value_3) {
                         if ($value_3 === null) {
                             $values_3[$key_1] = null;
                             continue;

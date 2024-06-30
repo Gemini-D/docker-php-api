@@ -61,16 +61,16 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Images', $data)) {
                 $values = [];
-                foreach ($data['Images'] as $value) {
+                foreach ($data['Images'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\ImageSummary', 'json', $context);
                 }
                 $object->setImages($values);
             }
             if (array_key_exists('Containers', $data)) {
                 $values_1 = [];
-                foreach ($data['Containers'] as $value_1) {
+                foreach ($data['Containers'] ?? [] as $value_1) {
                     $values_2 = [];
-                    foreach ($value_1 as $value_2) {
+                    foreach ($value_1 ?? [] as $value_2) {
                         $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\ContainerSummaryItem', 'json', $context);
                     }
                     $values_1[] = $values_2;
@@ -79,7 +79,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Volumes', $data)) {
                 $values_3 = [];
-                foreach ($data['Volumes'] as $value_3) {
+                foreach ($data['Volumes'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\Volume', 'json', $context);
                 }
                 $object->setVolumes($values_3);
@@ -167,16 +167,16 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Images', $data)) {
                 $values = [];
-                foreach ($data['Images'] as $value) {
+                foreach ($data['Images'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\ImageSummary', 'json', $context);
                 }
                 $object->setImages($values);
             }
             if (array_key_exists('Containers', $data)) {
                 $values_1 = [];
-                foreach ($data['Containers'] as $value_1) {
+                foreach ($data['Containers'] ?? [] as $value_1) {
                     $values_2 = [];
-                    foreach ($value_1 as $value_2) {
+                    foreach ($value_1 ?? [] as $value_2) {
                         $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\ContainerSummaryItem', 'json', $context);
                     }
                     $values_1[] = $values_2;
@@ -185,7 +185,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Volumes', $data)) {
                 $values_3 = [];
-                foreach ($data['Volumes'] as $value_3) {
+                foreach ($data['Volumes'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\Volume', 'json', $context);
                 }
                 $object->setVolumes($values_3);

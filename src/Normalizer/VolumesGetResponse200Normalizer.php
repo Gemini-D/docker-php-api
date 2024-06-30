@@ -58,14 +58,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Volumes', $data)) {
                 $values = [];
-                foreach ($data['Volumes'] as $value) {
+                foreach ($data['Volumes'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\Volume', 'json', $context);
                 }
                 $object->setVolumes($values);
             }
             if (array_key_exists('Warnings', $data)) {
                 $values_1 = [];
-                foreach ($data['Warnings'] as $value_1) {
+                foreach ($data['Warnings'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setWarnings($values_1);
@@ -132,14 +132,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Volumes', $data)) {
                 $values = [];
-                foreach ($data['Volumes'] as $value) {
+                foreach ($data['Volumes'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\Volume', 'json', $context);
                 }
                 $object->setVolumes($values);
             }
             if (array_key_exists('Warnings', $data)) {
                 $values_1 = [];
-                foreach ($data['Warnings'] as $value_1) {
+                foreach ($data['Warnings'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setWarnings($values_1);

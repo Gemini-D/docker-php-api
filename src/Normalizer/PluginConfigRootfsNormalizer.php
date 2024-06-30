@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('diff_ids', $data)) {
                 $values = [];
-                foreach ($data['diff_ids'] as $value) {
+                foreach ($data['diff_ids'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setDiffIds($values);
@@ -131,7 +131,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('diff_ids', $data)) {
                 $values = [];
-                foreach ($data['diff_ids'] as $value) {
+                foreach ($data['diff_ids'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setDiffIds($values);

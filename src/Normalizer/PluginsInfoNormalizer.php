@@ -58,28 +58,28 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Volume', $data)) {
                 $values = [];
-                foreach ($data['Volume'] as $value) {
+                foreach ($data['Volume'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setVolume($values);
             }
             if (array_key_exists('Network', $data)) {
                 $values_1 = [];
-                foreach ($data['Network'] as $value_1) {
+                foreach ($data['Network'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setNetwork($values_1);
             }
             if (array_key_exists('Authorization', $data)) {
                 $values_2 = [];
-                foreach ($data['Authorization'] as $value_2) {
+                foreach ($data['Authorization'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setAuthorization($values_2);
             }
             if (array_key_exists('Log', $data)) {
                 $values_3 = [];
-                foreach ($data['Log'] as $value_3) {
+                foreach ($data['Log'] ?? [] as $value_3) {
                     $values_3[] = $value_3;
                 }
                 $object->setLog($values_3);
@@ -164,28 +164,28 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Volume', $data)) {
                 $values = [];
-                foreach ($data['Volume'] as $value) {
+                foreach ($data['Volume'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setVolume($values);
             }
             if (array_key_exists('Network', $data)) {
                 $values_1 = [];
-                foreach ($data['Network'] as $value_1) {
+                foreach ($data['Network'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setNetwork($values_1);
             }
             if (array_key_exists('Authorization', $data)) {
                 $values_2 = [];
-                foreach ($data['Authorization'] as $value_2) {
+                foreach ($data['Authorization'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setAuthorization($values_2);
             }
             if (array_key_exists('Log', $data)) {
                 $values_3 = [];
-                foreach ($data['Log'] as $value_3) {
+                foreach ($data['Log'] ?? [] as $value_3) {
                     $values_3[] = $value_3;
                 }
                 $object->setLog($values_3);

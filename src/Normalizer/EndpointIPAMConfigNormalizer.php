@@ -64,7 +64,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('LinkLocalIPs', $data)) {
                 $values = [];
-                foreach ($data['LinkLocalIPs'] as $value) {
+                foreach ($data['LinkLocalIPs'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setLinkLocalIPs($values);
@@ -140,7 +140,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('LinkLocalIPs', $data)) {
                 $values = [];
-                foreach ($data['LinkLocalIPs'] as $value) {
+                foreach ($data['LinkLocalIPs'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setLinkLocalIPs($values);

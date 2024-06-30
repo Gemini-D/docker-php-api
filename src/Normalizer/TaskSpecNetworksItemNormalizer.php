@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Aliases', $data)) {
                 $values = [];
-                foreach ($data['Aliases'] as $value) {
+                foreach ($data['Aliases'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setAliases($values);
@@ -131,7 +131,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Aliases', $data)) {
                 $values = [];
-                foreach ($data['Aliases'] as $value) {
+                foreach ($data['Aliases'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setAliases($values);

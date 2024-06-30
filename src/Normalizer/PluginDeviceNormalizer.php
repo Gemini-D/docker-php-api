@@ -64,7 +64,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Settable', $data)) {
                 $values = [];
-                foreach ($data['Settable'] as $value) {
+                foreach ($data['Settable'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setSettable($values);
@@ -138,7 +138,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Settable', $data)) {
                 $values = [];
-                foreach ($data['Settable'] as $value) {
+                foreach ($data['Settable'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setSettable($values);

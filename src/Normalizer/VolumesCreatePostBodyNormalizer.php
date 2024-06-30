@@ -64,7 +64,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('DriverOpts', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['DriverOpts'] as $key => $value) {
+                foreach ($data['DriverOpts'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -75,7 +75,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key_1 => $value_1) {
+                foreach ($data['Labels'] ?? [] as $key_1 => $value_1) {
                     if ($value_1 === null) {
                         $values_1[$key_1] = null;
                         continue;
@@ -162,7 +162,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('DriverOpts', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['DriverOpts'] as $key => $value) {
+                foreach ($data['DriverOpts'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -173,7 +173,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key_1 => $value_1) {
+                foreach ($data['Labels'] ?? [] as $key_1 => $value_1) {
                     if ($value_1 === null) {
                         $values_1[$key_1] = null;
                         continue;

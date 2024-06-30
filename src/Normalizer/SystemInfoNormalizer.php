@@ -79,9 +79,9 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('DriverStatus', $data)) {
                 $values = [];
-                foreach ($data['DriverStatus'] as $value) {
+                foreach ($data['DriverStatus'] ?? [] as $value) {
                     $values_1 = [];
-                    foreach ($value as $value_1) {
+                    foreach ($value ?? [] as $value_1) {
                         $values_1[] = $value_1;
                     }
                     $values[] = $values_1;
@@ -93,9 +93,9 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SystemStatus', $data)) {
                 $values_2 = [];
-                foreach ($data['SystemStatus'] as $value_2) {
+                foreach ($data['SystemStatus'] ?? [] as $value_2) {
                     $values_3 = [];
-                    foreach ($value_2 as $value_3) {
+                    foreach ($value_2 ?? [] as $value_3) {
                         $values_3[] = $value_3;
                     }
                     $values_2[] = $values_3;
@@ -187,7 +187,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('GenericResources', $data)) {
                 $values_4 = [];
-                foreach ($data['GenericResources'] as $value_4) {
+                foreach ($data['GenericResources'] ?? [] as $value_4) {
                     $values_4[] = $this->denormalizer->denormalize($value_4, 'Docker\API\Model\GenericResourcesItem', 'json', $context);
                 }
                 $object->setGenericResources($values_4);
@@ -206,7 +206,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values_5 = [];
-                foreach ($data['Labels'] as $value_5) {
+                foreach ($data['Labels'] ?? [] as $value_5) {
                     $values_5[] = $value_5;
                 }
                 $object->setLabels($values_5);
@@ -225,7 +225,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Runtimes', $data)) {
                 $values_6 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Runtimes'] as $key => $value_6) {
+                foreach ($data['Runtimes'] ?? [] as $key => $value_6) {
                     if ($value_6 === null) {
                         $values_6[$key] = null;
                         continue;
@@ -260,7 +260,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SecurityOptions', $data)) {
                 $values_7 = [];
-                foreach ($data['SecurityOptions'] as $value_7) {
+                foreach ($data['SecurityOptions'] ?? [] as $value_7) {
                     $values_7[] = $value_7;
                 }
                 $object->setSecurityOptions($values_7);
@@ -541,9 +541,9 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('DriverStatus', $data)) {
                 $values = [];
-                foreach ($data['DriverStatus'] as $value) {
+                foreach ($data['DriverStatus'] ?? [] as $value) {
                     $values_1 = [];
-                    foreach ($value as $value_1) {
+                    foreach ($value ?? [] as $value_1) {
                         $values_1[] = $value_1;
                     }
                     $values[] = $values_1;
@@ -555,9 +555,9 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SystemStatus', $data)) {
                 $values_2 = [];
-                foreach ($data['SystemStatus'] as $value_2) {
+                foreach ($data['SystemStatus'] ?? [] as $value_2) {
                     $values_3 = [];
-                    foreach ($value_2 as $value_3) {
+                    foreach ($value_2 ?? [] as $value_3) {
                         $values_3[] = $value_3;
                     }
                     $values_2[] = $values_3;
@@ -649,7 +649,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('GenericResources', $data)) {
                 $values_4 = [];
-                foreach ($data['GenericResources'] as $value_4) {
+                foreach ($data['GenericResources'] ?? [] as $value_4) {
                     $values_4[] = $this->denormalizer->denormalize($value_4, 'Docker\API\Model\GenericResourcesItem', 'json', $context);
                 }
                 $object->setGenericResources($values_4);
@@ -668,7 +668,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values_5 = [];
-                foreach ($data['Labels'] as $value_5) {
+                foreach ($data['Labels'] ?? [] as $value_5) {
                     $values_5[] = $value_5;
                 }
                 $object->setLabels($values_5);
@@ -687,7 +687,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Runtimes', $data)) {
                 $values_6 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Runtimes'] as $key => $value_6) {
+                foreach ($data['Runtimes'] ?? [] as $key => $value_6) {
                     if ($value_6 === null) {
                         $values_6[$key] = null;
                         continue;
@@ -722,7 +722,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SecurityOptions', $data)) {
                 $values_7 = [];
-                foreach ($data['SecurityOptions'] as $value_7) {
+                foreach ($data['SecurityOptions'] ?? [] as $value_7) {
                     $values_7[] = $value_7;
                 }
                 $object->setSecurityOptions($values_7);

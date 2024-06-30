@@ -58,7 +58,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Types', $data)) {
                 $values = [];
-                foreach ($data['Types'] as $value) {
+                foreach ($data['Types'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\PluginInterfaceType', 'json', $context);
                 }
                 $object->setTypes($values);
@@ -124,7 +124,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Types', $data)) {
                 $values = [];
-                foreach ($data['Types'] as $value) {
+                foreach ($data['Types'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\PluginInterfaceType', 'json', $context);
                 }
                 $object->setTypes($values);

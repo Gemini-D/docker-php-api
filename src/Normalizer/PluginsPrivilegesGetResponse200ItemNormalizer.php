@@ -64,7 +64,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Value', $data)) {
                 $values = [];
-                foreach ($data['Value'] as $value) {
+                foreach ($data['Value'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setValue($values);
@@ -140,7 +140,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Value', $data)) {
                 $values = [];
-                foreach ($data['Value'] as $value) {
+                foreach ($data['Value'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setValue($values);

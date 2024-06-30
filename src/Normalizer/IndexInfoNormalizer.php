@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mirrors', $data)) {
                 $values = [];
-                foreach ($data['Mirrors'] as $value) {
+                foreach ($data['Mirrors'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setMirrors($values);
@@ -143,7 +143,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mirrors', $data)) {
                 $values = [];
-                foreach ($data['Mirrors'] as $value) {
+                foreach ($data['Mirrors'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setMirrors($values);

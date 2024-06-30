@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ports', $data)) {
                 $values = [];
-                foreach ($data['Ports'] as $value) {
+                foreach ($data['Ports'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\EndpointPortConfig', 'json', $context);
                 }
                 $object->setPorts($values);
@@ -131,7 +131,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ports', $data)) {
                 $values = [];
-                foreach ($data['Ports'] as $value) {
+                foreach ($data['Ports'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\EndpointPortConfig', 'json', $context);
                 }
                 $object->setPorts($values);

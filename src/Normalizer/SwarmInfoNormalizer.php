@@ -73,7 +73,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('RemoteManagers', $data) && $data['RemoteManagers'] !== null) {
                 $values = [];
-                foreach ($data['RemoteManagers'] as $value) {
+                foreach ($data['RemoteManagers'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\PeerNode', 'json', $context);
                 }
                 $object->setRemoteManagers($values);
@@ -193,7 +193,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('RemoteManagers', $data) && $data['RemoteManagers'] !== null) {
                 $values = [];
-                foreach ($data['RemoteManagers'] as $value) {
+                foreach ($data['RemoteManagers'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\PeerNode', 'json', $context);
                 }
                 $object->setRemoteManagers($values);

@@ -70,35 +70,35 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('BlkioWeightDevice', $data)) {
                 $values = [];
-                foreach ($data['BlkioWeightDevice'] as $value) {
+                foreach ($data['BlkioWeightDevice'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\ResourcesBlkioWeightDeviceItem', 'json', $context);
                 }
                 $object->setBlkioWeightDevice($values);
             }
             if (array_key_exists('BlkioDeviceReadBps', $data)) {
                 $values_1 = [];
-                foreach ($data['BlkioDeviceReadBps'] as $value_1) {
+                foreach ($data['BlkioDeviceReadBps'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceReadBps($values_1);
             }
             if (array_key_exists('BlkioDeviceWriteBps', $data)) {
                 $values_2 = [];
-                foreach ($data['BlkioDeviceWriteBps'] as $value_2) {
+                foreach ($data['BlkioDeviceWriteBps'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceWriteBps($values_2);
             }
             if (array_key_exists('BlkioDeviceReadIOps', $data)) {
                 $values_3 = [];
-                foreach ($data['BlkioDeviceReadIOps'] as $value_3) {
+                foreach ($data['BlkioDeviceReadIOps'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceReadIOps($values_3);
             }
             if (array_key_exists('BlkioDeviceWriteIOps', $data)) {
                 $values_4 = [];
-                foreach ($data['BlkioDeviceWriteIOps'] as $value_4) {
+                foreach ($data['BlkioDeviceWriteIOps'] ?? [] as $value_4) {
                     $values_4[] = $this->denormalizer->denormalize($value_4, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceWriteIOps($values_4);
@@ -123,14 +123,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Devices', $data)) {
                 $values_5 = [];
-                foreach ($data['Devices'] as $value_5) {
+                foreach ($data['Devices'] ?? [] as $value_5) {
                     $values_5[] = $this->denormalizer->denormalize($value_5, 'Docker\API\Model\DeviceMapping', 'json', $context);
                 }
                 $object->setDevices($values_5);
             }
             if (array_key_exists('DeviceCgroupRules', $data)) {
                 $values_6 = [];
-                foreach ($data['DeviceCgroupRules'] as $value_6) {
+                foreach ($data['DeviceCgroupRules'] ?? [] as $value_6) {
                     $values_6[] = $value_6;
                 }
                 $object->setDeviceCgroupRules($values_6);
@@ -161,7 +161,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ulimits', $data)) {
                 $values_7 = [];
-                foreach ($data['Ulimits'] as $value_7) {
+                foreach ($data['Ulimits'] ?? [] as $value_7) {
                     $values_7[] = $this->denormalizer->denormalize($value_7, 'Docker\API\Model\ResourcesUlimitsItem', 'json', $context);
                 }
                 $object->setUlimits($values_7);
@@ -180,7 +180,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Binds', $data)) {
                 $values_8 = [];
-                foreach ($data['Binds'] as $value_8) {
+                foreach ($data['Binds'] ?? [] as $value_8) {
                     $values_8[] = $value_8;
                 }
                 $object->setBinds($values_8);
@@ -196,13 +196,13 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('PortBindings', $data)) {
                 $values_9 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['PortBindings'] as $key => $value_9) {
+                foreach ($data['PortBindings'] ?? [] as $key => $value_9) {
                     if ($value_9 === null) {
                         $values_9[$key] = null;
                         continue;
                     }
                     $values_10 = [];
-                    foreach ($value_9 as $value_10) {
+                    foreach ($value_9 ?? [] as $value_10) {
                         $values_10[] = $this->denormalizer->denormalize($value_10, 'Docker\API\Model\PortBinding', 'json', $context);
                     }
                     $values_9[$key] = $values_10;
@@ -220,63 +220,63 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('VolumesFrom', $data)) {
                 $values_11 = [];
-                foreach ($data['VolumesFrom'] as $value_11) {
+                foreach ($data['VolumesFrom'] ?? [] as $value_11) {
                     $values_11[] = $value_11;
                 }
                 $object->setVolumesFrom($values_11);
             }
             if (array_key_exists('Mounts', $data)) {
                 $values_12 = [];
-                foreach ($data['Mounts'] as $value_12) {
+                foreach ($data['Mounts'] ?? [] as $value_12) {
                     $values_12[] = $this->denormalizer->denormalize($value_12, 'Docker\API\Model\Mount', 'json', $context);
                 }
                 $object->setMounts($values_12);
             }
             if (array_key_exists('CapAdd', $data)) {
                 $values_13 = [];
-                foreach ($data['CapAdd'] as $value_13) {
+                foreach ($data['CapAdd'] ?? [] as $value_13) {
                     $values_13[] = $value_13;
                 }
                 $object->setCapAdd($values_13);
             }
             if (array_key_exists('CapDrop', $data)) {
                 $values_14 = [];
-                foreach ($data['CapDrop'] as $value_14) {
+                foreach ($data['CapDrop'] ?? [] as $value_14) {
                     $values_14[] = $value_14;
                 }
                 $object->setCapDrop($values_14);
             }
             if (array_key_exists('Dns', $data)) {
                 $values_15 = [];
-                foreach ($data['Dns'] as $value_15) {
+                foreach ($data['Dns'] ?? [] as $value_15) {
                     $values_15[] = $value_15;
                 }
                 $object->setDns($values_15);
             }
             if (array_key_exists('DnsOptions', $data)) {
                 $values_16 = [];
-                foreach ($data['DnsOptions'] as $value_16) {
+                foreach ($data['DnsOptions'] ?? [] as $value_16) {
                     $values_16[] = $value_16;
                 }
                 $object->setDnsOptions($values_16);
             }
             if (array_key_exists('DnsSearch', $data)) {
                 $values_17 = [];
-                foreach ($data['DnsSearch'] as $value_17) {
+                foreach ($data['DnsSearch'] ?? [] as $value_17) {
                     $values_17[] = $value_17;
                 }
                 $object->setDnsSearch($values_17);
             }
             if (array_key_exists('ExtraHosts', $data)) {
                 $values_18 = [];
-                foreach ($data['ExtraHosts'] as $value_18) {
+                foreach ($data['ExtraHosts'] ?? [] as $value_18) {
                     $values_18[] = $value_18;
                 }
                 $object->setExtraHosts($values_18);
             }
             if (array_key_exists('GroupAdd', $data)) {
                 $values_19 = [];
-                foreach ($data['GroupAdd'] as $value_19) {
+                foreach ($data['GroupAdd'] ?? [] as $value_19) {
                     $values_19[] = $value_19;
                 }
                 $object->setGroupAdd($values_19);
@@ -289,7 +289,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Links', $data)) {
                 $values_20 = [];
-                foreach ($data['Links'] as $value_20) {
+                foreach ($data['Links'] ?? [] as $value_20) {
                     $values_20[] = $value_20;
                 }
                 $object->setLinks($values_20);
@@ -311,14 +311,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SecurityOpt', $data)) {
                 $values_21 = [];
-                foreach ($data['SecurityOpt'] as $value_21) {
+                foreach ($data['SecurityOpt'] ?? [] as $value_21) {
                     $values_21[] = $value_21;
                 }
                 $object->setSecurityOpt($values_21);
             }
             if (array_key_exists('StorageOpt', $data)) {
                 $values_22 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['StorageOpt'] as $key_1 => $value_22) {
+                foreach ($data['StorageOpt'] ?? [] as $key_1 => $value_22) {
                     if ($value_22 === null) {
                         $values_22[$key_1] = null;
                         continue;
@@ -329,7 +329,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Tmpfs', $data)) {
                 $values_23 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Tmpfs'] as $key_2 => $value_23) {
+                foreach ($data['Tmpfs'] ?? [] as $key_2 => $value_23) {
                     if ($value_23 === null) {
                         $values_23[$key_2] = null;
                         continue;
@@ -349,7 +349,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Sysctls', $data)) {
                 $values_24 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Sysctls'] as $key_3 => $value_24) {
+                foreach ($data['Sysctls'] ?? [] as $key_3 => $value_24) {
                     if ($value_24 === null) {
                         $values_24[$key_3] = null;
                         continue;
@@ -363,7 +363,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('ConsoleSize', $data)) {
                 $values_25 = [];
-                foreach ($data['ConsoleSize'] as $value_25) {
+                foreach ($data['ConsoleSize'] ?? [] as $value_25) {
                     $values_25[] = $value_25;
                 }
                 $object->setConsoleSize($values_25);
@@ -734,35 +734,35 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('BlkioWeightDevice', $data)) {
                 $values = [];
-                foreach ($data['BlkioWeightDevice'] as $value) {
+                foreach ($data['BlkioWeightDevice'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\ResourcesBlkioWeightDeviceItem', 'json', $context);
                 }
                 $object->setBlkioWeightDevice($values);
             }
             if (array_key_exists('BlkioDeviceReadBps', $data)) {
                 $values_1 = [];
-                foreach ($data['BlkioDeviceReadBps'] as $value_1) {
+                foreach ($data['BlkioDeviceReadBps'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceReadBps($values_1);
             }
             if (array_key_exists('BlkioDeviceWriteBps', $data)) {
                 $values_2 = [];
-                foreach ($data['BlkioDeviceWriteBps'] as $value_2) {
+                foreach ($data['BlkioDeviceWriteBps'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceWriteBps($values_2);
             }
             if (array_key_exists('BlkioDeviceReadIOps', $data)) {
                 $values_3 = [];
-                foreach ($data['BlkioDeviceReadIOps'] as $value_3) {
+                foreach ($data['BlkioDeviceReadIOps'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceReadIOps($values_3);
             }
             if (array_key_exists('BlkioDeviceWriteIOps', $data)) {
                 $values_4 = [];
-                foreach ($data['BlkioDeviceWriteIOps'] as $value_4) {
+                foreach ($data['BlkioDeviceWriteIOps'] ?? [] as $value_4) {
                     $values_4[] = $this->denormalizer->denormalize($value_4, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceWriteIOps($values_4);
@@ -787,14 +787,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Devices', $data)) {
                 $values_5 = [];
-                foreach ($data['Devices'] as $value_5) {
+                foreach ($data['Devices'] ?? [] as $value_5) {
                     $values_5[] = $this->denormalizer->denormalize($value_5, 'Docker\API\Model\DeviceMapping', 'json', $context);
                 }
                 $object->setDevices($values_5);
             }
             if (array_key_exists('DeviceCgroupRules', $data)) {
                 $values_6 = [];
-                foreach ($data['DeviceCgroupRules'] as $value_6) {
+                foreach ($data['DeviceCgroupRules'] ?? [] as $value_6) {
                     $values_6[] = $value_6;
                 }
                 $object->setDeviceCgroupRules($values_6);
@@ -825,7 +825,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ulimits', $data)) {
                 $values_7 = [];
-                foreach ($data['Ulimits'] as $value_7) {
+                foreach ($data['Ulimits'] ?? [] as $value_7) {
                     $values_7[] = $this->denormalizer->denormalize($value_7, 'Docker\API\Model\ResourcesUlimitsItem', 'json', $context);
                 }
                 $object->setUlimits($values_7);
@@ -844,7 +844,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Binds', $data)) {
                 $values_8 = [];
-                foreach ($data['Binds'] as $value_8) {
+                foreach ($data['Binds'] ?? [] as $value_8) {
                     $values_8[] = $value_8;
                 }
                 $object->setBinds($values_8);
@@ -860,13 +860,13 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('PortBindings', $data)) {
                 $values_9 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['PortBindings'] as $key => $value_9) {
+                foreach ($data['PortBindings'] ?? [] as $key => $value_9) {
                     if ($value_9 === null) {
                         $values_9[$key] = null;
                         continue;
                     }
                     $values_10 = [];
-                    foreach ($value_9 as $value_10) {
+                    foreach ($value_9 ?? [] as $value_10) {
                         $values_10[] = $this->denormalizer->denormalize($value_10, 'Docker\API\Model\PortBinding', 'json', $context);
                     }
                     $values_9[$key] = $values_10;
@@ -884,63 +884,63 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('VolumesFrom', $data)) {
                 $values_11 = [];
-                foreach ($data['VolumesFrom'] as $value_11) {
+                foreach ($data['VolumesFrom'] ?? [] as $value_11) {
                     $values_11[] = $value_11;
                 }
                 $object->setVolumesFrom($values_11);
             }
             if (array_key_exists('Mounts', $data)) {
                 $values_12 = [];
-                foreach ($data['Mounts'] as $value_12) {
+                foreach ($data['Mounts'] ?? [] as $value_12) {
                     $values_12[] = $this->denormalizer->denormalize($value_12, 'Docker\API\Model\Mount', 'json', $context);
                 }
                 $object->setMounts($values_12);
             }
             if (array_key_exists('CapAdd', $data)) {
                 $values_13 = [];
-                foreach ($data['CapAdd'] as $value_13) {
+                foreach ($data['CapAdd'] ?? [] as $value_13) {
                     $values_13[] = $value_13;
                 }
                 $object->setCapAdd($values_13);
             }
             if (array_key_exists('CapDrop', $data)) {
                 $values_14 = [];
-                foreach ($data['CapDrop'] as $value_14) {
+                foreach ($data['CapDrop'] ?? [] as $value_14) {
                     $values_14[] = $value_14;
                 }
                 $object->setCapDrop($values_14);
             }
             if (array_key_exists('Dns', $data)) {
                 $values_15 = [];
-                foreach ($data['Dns'] as $value_15) {
+                foreach ($data['Dns'] ?? [] as $value_15) {
                     $values_15[] = $value_15;
                 }
                 $object->setDns($values_15);
             }
             if (array_key_exists('DnsOptions', $data)) {
                 $values_16 = [];
-                foreach ($data['DnsOptions'] as $value_16) {
+                foreach ($data['DnsOptions'] ?? [] as $value_16) {
                     $values_16[] = $value_16;
                 }
                 $object->setDnsOptions($values_16);
             }
             if (array_key_exists('DnsSearch', $data)) {
                 $values_17 = [];
-                foreach ($data['DnsSearch'] as $value_17) {
+                foreach ($data['DnsSearch'] ?? [] as $value_17) {
                     $values_17[] = $value_17;
                 }
                 $object->setDnsSearch($values_17);
             }
             if (array_key_exists('ExtraHosts', $data)) {
                 $values_18 = [];
-                foreach ($data['ExtraHosts'] as $value_18) {
+                foreach ($data['ExtraHosts'] ?? [] as $value_18) {
                     $values_18[] = $value_18;
                 }
                 $object->setExtraHosts($values_18);
             }
             if (array_key_exists('GroupAdd', $data)) {
                 $values_19 = [];
-                foreach ($data['GroupAdd'] as $value_19) {
+                foreach ($data['GroupAdd'] ?? [] as $value_19) {
                     $values_19[] = $value_19;
                 }
                 $object->setGroupAdd($values_19);
@@ -953,7 +953,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Links', $data)) {
                 $values_20 = [];
-                foreach ($data['Links'] as $value_20) {
+                foreach ($data['Links'] ?? [] as $value_20) {
                     $values_20[] = $value_20;
                 }
                 $object->setLinks($values_20);
@@ -975,14 +975,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SecurityOpt', $data)) {
                 $values_21 = [];
-                foreach ($data['SecurityOpt'] as $value_21) {
+                foreach ($data['SecurityOpt'] ?? [] as $value_21) {
                     $values_21[] = $value_21;
                 }
                 $object->setSecurityOpt($values_21);
             }
             if (array_key_exists('StorageOpt', $data)) {
                 $values_22 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['StorageOpt'] as $key_1 => $value_22) {
+                foreach ($data['StorageOpt'] ?? [] as $key_1 => $value_22) {
                     if ($value_22 === null) {
                         $values_22[$key_1] = null;
                         continue;
@@ -993,7 +993,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Tmpfs', $data)) {
                 $values_23 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Tmpfs'] as $key_2 => $value_23) {
+                foreach ($data['Tmpfs'] ?? [] as $key_2 => $value_23) {
                     if ($value_23 === null) {
                         $values_23[$key_2] = null;
                         continue;
@@ -1013,7 +1013,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Sysctls', $data)) {
                 $values_24 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Sysctls'] as $key_3 => $value_24) {
+                foreach ($data['Sysctls'] ?? [] as $key_3 => $value_24) {
                     if ($value_24 === null) {
                         $values_24[$key_3] = null;
                         continue;
@@ -1027,7 +1027,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('ConsoleSize', $data)) {
                 $values_25 = [];
-                foreach ($data['ConsoleSize'] as $value_25) {
+                foreach ($data['ConsoleSize'] ?? [] as $value_25) {
                     $values_25[] = $value_25;
                 }
                 $object->setConsoleSize($values_25);

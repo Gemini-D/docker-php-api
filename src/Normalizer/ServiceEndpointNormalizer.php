@@ -61,14 +61,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ports', $data)) {
                 $values = [];
-                foreach ($data['Ports'] as $value) {
+                foreach ($data['Ports'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\EndpointPortConfig', 'json', $context);
                 }
                 $object->setPorts($values);
             }
             if (array_key_exists('VirtualIPs', $data)) {
                 $values_1 = [];
-                foreach ($data['VirtualIPs'] as $value_1) {
+                foreach ($data['VirtualIPs'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\ServiceEndpointVirtualIPsItem', 'json', $context);
                 }
                 $object->setVirtualIPs($values_1);
@@ -145,14 +145,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ports', $data)) {
                 $values = [];
-                foreach ($data['Ports'] as $value) {
+                foreach ($data['Ports'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\EndpointPortConfig', 'json', $context);
                 }
                 $object->setPorts($values);
             }
             if (array_key_exists('VirtualIPs', $data)) {
                 $values_1 = [];
-                foreach ($data['VirtualIPs'] as $value_1) {
+                foreach ($data['VirtualIPs'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\ServiceEndpointVirtualIPsItem', 'json', $context);
                 }
                 $object->setVirtualIPs($values_1);

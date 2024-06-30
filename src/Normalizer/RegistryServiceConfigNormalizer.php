@@ -58,28 +58,28 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('AllowNondistributableArtifactsCIDRs', $data)) {
                 $values = [];
-                foreach ($data['AllowNondistributableArtifactsCIDRs'] as $value) {
+                foreach ($data['AllowNondistributableArtifactsCIDRs'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setAllowNondistributableArtifactsCIDRs($values);
             }
             if (array_key_exists('AllowNondistributableArtifactsHostnames', $data)) {
                 $values_1 = [];
-                foreach ($data['AllowNondistributableArtifactsHostnames'] as $value_1) {
+                foreach ($data['AllowNondistributableArtifactsHostnames'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setAllowNondistributableArtifactsHostnames($values_1);
             }
             if (array_key_exists('InsecureRegistryCIDRs', $data)) {
                 $values_2 = [];
-                foreach ($data['InsecureRegistryCIDRs'] as $value_2) {
+                foreach ($data['InsecureRegistryCIDRs'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setInsecureRegistryCIDRs($values_2);
             }
             if (array_key_exists('IndexConfigs', $data)) {
                 $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['IndexConfigs'] as $key => $value_3) {
+                foreach ($data['IndexConfigs'] ?? [] as $key => $value_3) {
                     if ($value_3 === null) {
                         $values_3[$key] = null;
                         continue;
@@ -90,7 +90,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mirrors', $data)) {
                 $values_4 = [];
-                foreach ($data['Mirrors'] as $value_4) {
+                foreach ($data['Mirrors'] ?? [] as $value_4) {
                     $values_4[] = $value_4;
                 }
                 $object->setMirrors($values_4);
@@ -182,28 +182,28 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('AllowNondistributableArtifactsCIDRs', $data)) {
                 $values = [];
-                foreach ($data['AllowNondistributableArtifactsCIDRs'] as $value) {
+                foreach ($data['AllowNondistributableArtifactsCIDRs'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setAllowNondistributableArtifactsCIDRs($values);
             }
             if (array_key_exists('AllowNondistributableArtifactsHostnames', $data)) {
                 $values_1 = [];
-                foreach ($data['AllowNondistributableArtifactsHostnames'] as $value_1) {
+                foreach ($data['AllowNondistributableArtifactsHostnames'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setAllowNondistributableArtifactsHostnames($values_1);
             }
             if (array_key_exists('InsecureRegistryCIDRs', $data)) {
                 $values_2 = [];
-                foreach ($data['InsecureRegistryCIDRs'] as $value_2) {
+                foreach ($data['InsecureRegistryCIDRs'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setInsecureRegistryCIDRs($values_2);
             }
             if (array_key_exists('IndexConfigs', $data)) {
                 $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['IndexConfigs'] as $key => $value_3) {
+                foreach ($data['IndexConfigs'] ?? [] as $key => $value_3) {
                     if ($value_3 === null) {
                         $values_3[$key] = null;
                         continue;
@@ -214,7 +214,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mirrors', $data)) {
                 $values_4 = [];
-                foreach ($data['Mirrors'] as $value_4) {
+                foreach ($data['Mirrors'] ?? [] as $value_4) {
                     $values_4[] = $value_4;
                 }
                 $object->setMirrors($values_4);

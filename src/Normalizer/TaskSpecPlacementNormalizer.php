@@ -58,21 +58,21 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Constraints', $data)) {
                 $values = [];
-                foreach ($data['Constraints'] as $value) {
+                foreach ($data['Constraints'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setConstraints($values);
             }
             if (array_key_exists('Preferences', $data)) {
                 $values_1 = [];
-                foreach ($data['Preferences'] as $value_1) {
+                foreach ($data['Preferences'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\TaskSpecPlacementPreferencesItem', 'json', $context);
                 }
                 $object->setPreferences($values_1);
             }
             if (array_key_exists('Platforms', $data)) {
                 $values_2 = [];
-                foreach ($data['Platforms'] as $value_2) {
+                foreach ($data['Platforms'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\Platform', 'json', $context);
                 }
                 $object->setPlatforms($values_2);
@@ -150,21 +150,21 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Constraints', $data)) {
                 $values = [];
-                foreach ($data['Constraints'] as $value) {
+                foreach ($data['Constraints'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setConstraints($values);
             }
             if (array_key_exists('Preferences', $data)) {
                 $values_1 = [];
-                foreach ($data['Preferences'] as $value_1) {
+                foreach ($data['Preferences'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\TaskSpecPlacementPreferencesItem', 'json', $context);
                 }
                 $object->setPreferences($values_1);
             }
             if (array_key_exists('Platforms', $data)) {
                 $values_2 = [];
-                foreach ($data['Platforms'] as $value_2) {
+                foreach ($data['Platforms'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\Platform', 'json', $context);
                 }
                 $object->setPlatforms($values_2);

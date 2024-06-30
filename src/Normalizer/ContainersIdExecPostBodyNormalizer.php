@@ -73,14 +73,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Env', $data)) {
                 $values = [];
-                foreach ($data['Env'] as $value) {
+                foreach ($data['Env'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setEnv($values);
             }
             if (array_key_exists('Cmd', $data)) {
                 $values_1 = [];
-                foreach ($data['Cmd'] as $value_1) {
+                foreach ($data['Cmd'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setCmd($values_1);
@@ -199,14 +199,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Env', $data)) {
                 $values = [];
-                foreach ($data['Env'] as $value) {
+                foreach ($data['Env'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setEnv($values);
             }
             if (array_key_exists('Cmd', $data)) {
                 $values_1 = [];
-                foreach ($data['Cmd'] as $value_1) {
+                foreach ($data['Cmd'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setCmd($values_1);

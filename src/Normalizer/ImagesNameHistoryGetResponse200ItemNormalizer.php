@@ -67,7 +67,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Tags', $data)) {
                 $values = [];
-                foreach ($data['Tags'] as $value) {
+                foreach ($data['Tags'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setTags($values);
@@ -149,7 +149,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Tags', $data)) {
                 $values = [];
-                foreach ($data['Tags'] as $value) {
+                foreach ($data['Tags'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setTags($values);

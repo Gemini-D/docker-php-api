@@ -58,7 +58,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Capabilities', $data)) {
                 $values = [];
-                foreach ($data['Capabilities'] as $value) {
+                foreach ($data['Capabilities'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setCapabilities($values);
@@ -68,7 +68,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Devices', $data)) {
                 $values_1 = [];
-                foreach ($data['Devices'] as $value_1) {
+                foreach ($data['Devices'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\PluginDevice', 'json', $context);
                 }
                 $object->setDevices($values_1);
@@ -136,7 +136,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Capabilities', $data)) {
                 $values = [];
-                foreach ($data['Capabilities'] as $value) {
+                foreach ($data['Capabilities'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setCapabilities($values);
@@ -146,7 +146,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Devices', $data)) {
                 $values_1 = [];
-                foreach ($data['Devices'] as $value_1) {
+                foreach ($data['Devices'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\PluginDevice', 'json', $context);
                 }
                 $object->setDevices($values_1);

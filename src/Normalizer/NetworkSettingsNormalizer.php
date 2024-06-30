@@ -73,13 +73,13 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ports', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Ports'] as $key => $value) {
+                foreach ($data['Ports'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
                     }
                     $values_1 = [];
-                    foreach ($value as $value_1) {
+                    foreach ($value ?? [] as $value_1) {
                         $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\PortBinding', 'json', $context);
                     }
                     $values[$key] = $values_1;
@@ -91,7 +91,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SecondaryIPAddresses', $data) && $data['SecondaryIPAddresses'] !== null) {
                 $values_2 = [];
-                foreach ($data['SecondaryIPAddresses'] as $value_2) {
+                foreach ($data['SecondaryIPAddresses'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\Address', 'json', $context);
                 }
                 $object->setSecondaryIPAddresses($values_2);
@@ -100,7 +100,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SecondaryIPv6Addresses', $data) && $data['SecondaryIPv6Addresses'] !== null) {
                 $values_3 = [];
-                foreach ($data['SecondaryIPv6Addresses'] as $value_3) {
+                foreach ($data['SecondaryIPv6Addresses'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\Address', 'json', $context);
                 }
                 $object->setSecondaryIPv6Addresses($values_3);
@@ -133,7 +133,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Networks', $data)) {
                 $values_4 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Networks'] as $key_1 => $value_4) {
+                foreach ($data['Networks'] ?? [] as $key_1 => $value_4) {
                     if ($value_4 === null) {
                         $values_4[$key_1] = null;
                         continue;
@@ -283,13 +283,13 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ports', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Ports'] as $key => $value) {
+                foreach ($data['Ports'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
                     }
                     $values_1 = [];
-                    foreach ($value as $value_1) {
+                    foreach ($value ?? [] as $value_1) {
                         $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\PortBinding', 'json', $context);
                     }
                     $values[$key] = $values_1;
@@ -301,7 +301,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SecondaryIPAddresses', $data) && $data['SecondaryIPAddresses'] !== null) {
                 $values_2 = [];
-                foreach ($data['SecondaryIPAddresses'] as $value_2) {
+                foreach ($data['SecondaryIPAddresses'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\Address', 'json', $context);
                 }
                 $object->setSecondaryIPAddresses($values_2);
@@ -310,7 +310,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('SecondaryIPv6Addresses', $data) && $data['SecondaryIPv6Addresses'] !== null) {
                 $values_3 = [];
-                foreach ($data['SecondaryIPv6Addresses'] as $value_3) {
+                foreach ($data['SecondaryIPv6Addresses'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\Address', 'json', $context);
                 }
                 $object->setSecondaryIPv6Addresses($values_3);
@@ -343,7 +343,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Networks', $data)) {
                 $values_4 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Networks'] as $key_1 => $value_4) {
+                foreach ($data['Networks'] ?? [] as $key_1 => $value_4) {
                     if ($value_4 === null) {
                         $values_4[$key_1] = null;
                         continue;

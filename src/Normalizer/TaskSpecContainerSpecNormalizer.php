@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key => $value) {
+                foreach ($data['Labels'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -72,14 +72,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Command', $data)) {
                 $values_1 = [];
-                foreach ($data['Command'] as $value_1) {
+                foreach ($data['Command'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setCommand($values_1);
             }
             if (array_key_exists('Args', $data)) {
                 $values_2 = [];
-                foreach ($data['Args'] as $value_2) {
+                foreach ($data['Args'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setArgs($values_2);
@@ -89,7 +89,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Env', $data)) {
                 $values_3 = [];
-                foreach ($data['Env'] as $value_3) {
+                foreach ($data['Env'] ?? [] as $value_3) {
                     $values_3[] = $value_3;
                 }
                 $object->setEnv($values_3);
@@ -102,7 +102,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Groups', $data)) {
                 $values_4 = [];
-                foreach ($data['Groups'] as $value_4) {
+                foreach ($data['Groups'] ?? [] as $value_4) {
                     $values_4[] = $value_4;
                 }
                 $object->setGroups($values_4);
@@ -121,7 +121,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mounts', $data)) {
                 $values_5 = [];
-                foreach ($data['Mounts'] as $value_5) {
+                foreach ($data['Mounts'] ?? [] as $value_5) {
                     $values_5[] = $this->denormalizer->denormalize($value_5, 'Docker\API\Model\Mount', 'json', $context);
                 }
                 $object->setMounts($values_5);
@@ -137,7 +137,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Hosts', $data)) {
                 $values_6 = [];
-                foreach ($data['Hosts'] as $value_6) {
+                foreach ($data['Hosts'] ?? [] as $value_6) {
                     $values_6[] = $value_6;
                 }
                 $object->setHosts($values_6);
@@ -147,14 +147,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Secrets', $data)) {
                 $values_7 = [];
-                foreach ($data['Secrets'] as $value_7) {
+                foreach ($data['Secrets'] ?? [] as $value_7) {
                     $values_7[] = $this->denormalizer->denormalize($value_7, 'Docker\API\Model\TaskSpecContainerSpecSecretsItem', 'json', $context);
                 }
                 $object->setSecrets($values_7);
             }
             if (array_key_exists('Configs', $data)) {
                 $values_8 = [];
-                foreach ($data['Configs'] as $value_8) {
+                foreach ($data['Configs'] ?? [] as $value_8) {
                     $values_8[] = $this->denormalizer->denormalize($value_8, 'Docker\API\Model\TaskSpecContainerSpecConfigsItem', 'json', $context);
                 }
                 $object->setConfigs($values_8);
@@ -319,7 +319,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key => $value) {
+                foreach ($data['Labels'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -330,14 +330,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Command', $data)) {
                 $values_1 = [];
-                foreach ($data['Command'] as $value_1) {
+                foreach ($data['Command'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setCommand($values_1);
             }
             if (array_key_exists('Args', $data)) {
                 $values_2 = [];
-                foreach ($data['Args'] as $value_2) {
+                foreach ($data['Args'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setArgs($values_2);
@@ -347,7 +347,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Env', $data)) {
                 $values_3 = [];
-                foreach ($data['Env'] as $value_3) {
+                foreach ($data['Env'] ?? [] as $value_3) {
                     $values_3[] = $value_3;
                 }
                 $object->setEnv($values_3);
@@ -360,7 +360,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Groups', $data)) {
                 $values_4 = [];
-                foreach ($data['Groups'] as $value_4) {
+                foreach ($data['Groups'] ?? [] as $value_4) {
                     $values_4[] = $value_4;
                 }
                 $object->setGroups($values_4);
@@ -379,7 +379,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mounts', $data)) {
                 $values_5 = [];
-                foreach ($data['Mounts'] as $value_5) {
+                foreach ($data['Mounts'] ?? [] as $value_5) {
                     $values_5[] = $this->denormalizer->denormalize($value_5, 'Docker\API\Model\Mount', 'json', $context);
                 }
                 $object->setMounts($values_5);
@@ -395,7 +395,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Hosts', $data)) {
                 $values_6 = [];
-                foreach ($data['Hosts'] as $value_6) {
+                foreach ($data['Hosts'] ?? [] as $value_6) {
                     $values_6[] = $value_6;
                 }
                 $object->setHosts($values_6);
@@ -405,14 +405,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Secrets', $data)) {
                 $values_7 = [];
-                foreach ($data['Secrets'] as $value_7) {
+                foreach ($data['Secrets'] ?? [] as $value_7) {
                     $values_7[] = $this->denormalizer->denormalize($value_7, 'Docker\API\Model\TaskSpecContainerSpecSecretsItem', 'json', $context);
                 }
                 $object->setSecrets($values_7);
             }
             if (array_key_exists('Configs', $data)) {
                 $values_8 = [];
-                foreach ($data['Configs'] as $value_8) {
+                foreach ($data['Configs'] ?? [] as $value_8) {
                     $values_8[] = $this->denormalizer->denormalize($value_8, 'Docker\API\Model\TaskSpecContainerSpecConfigsItem', 'json', $context);
                 }
                 $object->setConfigs($values_8);

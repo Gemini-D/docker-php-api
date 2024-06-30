@@ -88,7 +88,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Containers', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Containers'] as $key => $value) {
+                foreach ($data['Containers'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -99,7 +99,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Options', $data)) {
                 $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Options'] as $key_1 => $value_1) {
+                foreach ($data['Options'] ?? [] as $key_1 => $value_1) {
                     if ($value_1 === null) {
                         $values_1[$key_1] = null;
                         continue;
@@ -110,7 +110,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values_2 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key_2 => $value_2) {
+                foreach ($data['Labels'] ?? [] as $key_2 => $value_2) {
                     if ($value_2 === null) {
                         $values_2[$key_2] = null;
                         continue;
@@ -252,7 +252,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Containers', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Containers'] as $key => $value) {
+                foreach ($data['Containers'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -263,7 +263,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Options', $data)) {
                 $values_1 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Options'] as $key_1 => $value_1) {
+                foreach ($data['Options'] ?? [] as $key_1 => $value_1) {
                     if ($value_1 === null) {
                         $values_1[$key_1] = null;
                         continue;
@@ -274,7 +274,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values_2 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key_2 => $value_2) {
+                foreach ($data['Labels'] ?? [] as $key_2 => $value_2) {
                     if ($value_2 === null) {
                         $values_2[$key_2] = null;
                         continue;

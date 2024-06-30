@@ -58,21 +58,21 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Nameservers', $data)) {
                 $values = [];
-                foreach ($data['Nameservers'] as $value) {
+                foreach ($data['Nameservers'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setNameservers($values);
             }
             if (array_key_exists('Search', $data)) {
                 $values_1 = [];
-                foreach ($data['Search'] as $value_1) {
+                foreach ($data['Search'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setSearch($values_1);
             }
             if (array_key_exists('Options', $data)) {
                 $values_2 = [];
-                foreach ($data['Options'] as $value_2) {
+                foreach ($data['Options'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setOptions($values_2);
@@ -150,21 +150,21 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Nameservers', $data)) {
                 $values = [];
-                foreach ($data['Nameservers'] as $value) {
+                foreach ($data['Nameservers'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setNameservers($values);
             }
             if (array_key_exists('Search', $data)) {
                 $values_1 = [];
-                foreach ($data['Search'] as $value_1) {
+                foreach ($data['Search'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setSearch($values_1);
             }
             if (array_key_exists('Options', $data)) {
                 $values_2 = [];
-                foreach ($data['Options'] as $value_2) {
+                foreach ($data['Options'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setOptions($values_2);

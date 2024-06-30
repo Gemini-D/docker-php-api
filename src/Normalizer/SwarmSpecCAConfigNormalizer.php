@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('ExternalCAs', $data)) {
                 $values = [];
-                foreach ($data['ExternalCAs'] as $value) {
+                foreach ($data['ExternalCAs'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\SwarmSpecCAConfigExternalCAsItem', 'json', $context);
                 }
                 $object->setExternalCAs($values);
@@ -149,7 +149,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('ExternalCAs', $data)) {
                 $values = [];
-                foreach ($data['ExternalCAs'] as $value) {
+                foreach ($data['ExternalCAs'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\SwarmSpecCAConfigExternalCAsItem', 'json', $context);
                 }
                 $object->setExternalCAs($values);

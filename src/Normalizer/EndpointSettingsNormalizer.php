@@ -63,14 +63,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Links', $data)) {
                 $values = [];
-                foreach ($data['Links'] as $value) {
+                foreach ($data['Links'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setLinks($values);
             }
             if (array_key_exists('Aliases', $data)) {
                 $values_1 = [];
-                foreach ($data['Aliases'] as $value_1) {
+                foreach ($data['Aliases'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setAliases($values_1);
@@ -104,7 +104,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('DriverOpts', $data) && $data['DriverOpts'] !== null) {
                 $values_2 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['DriverOpts'] as $key => $value_2) {
+                foreach ($data['DriverOpts'] ?? [] as $key => $value_2) {
                     if ($value_2 === null) {
                         $values_2[$key] = null;
                         continue;
@@ -223,14 +223,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Links', $data)) {
                 $values = [];
-                foreach ($data['Links'] as $value) {
+                foreach ($data['Links'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setLinks($values);
             }
             if (array_key_exists('Aliases', $data)) {
                 $values_1 = [];
-                foreach ($data['Aliases'] as $value_1) {
+                foreach ($data['Aliases'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setAliases($values_1);
@@ -264,7 +264,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('DriverOpts', $data) && $data['DriverOpts'] !== null) {
                 $values_2 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['DriverOpts'] as $key => $value_2) {
+                foreach ($data['DriverOpts'] ?? [] as $key => $value_2) {
                     if ($value_2 === null) {
                         $values_2[$key] = null;
                         continue;

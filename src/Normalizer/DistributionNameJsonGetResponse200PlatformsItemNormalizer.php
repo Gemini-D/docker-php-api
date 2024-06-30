@@ -67,7 +67,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('OSFeatures', $data)) {
                 $values = [];
-                foreach ($data['OSFeatures'] as $value) {
+                foreach ($data['OSFeatures'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setOSFeatures($values);
@@ -77,7 +77,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Features', $data)) {
                 $values_1 = [];
-                foreach ($data['Features'] as $value_1) {
+                foreach ($data['Features'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setFeatures($values_1);
@@ -169,7 +169,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('OSFeatures', $data)) {
                 $values = [];
-                foreach ($data['OSFeatures'] as $value) {
+                foreach ($data['OSFeatures'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setOSFeatures($values);
@@ -179,7 +179,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Features', $data)) {
                 $values_1 = [];
-                foreach ($data['Features'] as $value_1) {
+                foreach ($data['Features'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setFeatures($values_1);

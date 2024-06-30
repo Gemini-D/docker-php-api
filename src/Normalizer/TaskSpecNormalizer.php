@@ -79,7 +79,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Networks', $data)) {
                 $values = [];
-                foreach ($data['Networks'] as $value) {
+                foreach ($data['Networks'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\TaskSpecNetworksItem', 'json', $context);
                 }
                 $object->setNetworks($values);
@@ -191,7 +191,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Networks', $data)) {
                 $values = [];
-                foreach ($data['Networks'] as $value) {
+                foreach ($data['Networks'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\TaskSpecNetworksItem', 'json', $context);
                 }
                 $object->setNetworks($values);

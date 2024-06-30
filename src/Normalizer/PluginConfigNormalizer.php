@@ -70,7 +70,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Entrypoint', $data)) {
                 $values = [];
-                foreach ($data['Entrypoint'] as $value) {
+                foreach ($data['Entrypoint'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setEntrypoint($values);
@@ -98,14 +98,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mounts', $data)) {
                 $values_1 = [];
-                foreach ($data['Mounts'] as $value_1) {
+                foreach ($data['Mounts'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\PluginMount', 'json', $context);
                 }
                 $object->setMounts($values_1);
             }
             if (array_key_exists('Env', $data)) {
                 $values_2 = [];
-                foreach ($data['Env'] as $value_2) {
+                foreach ($data['Env'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\PluginEnv', 'json', $context);
                 }
                 $object->setEnv($values_2);
@@ -214,7 +214,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Entrypoint', $data)) {
                 $values = [];
-                foreach ($data['Entrypoint'] as $value) {
+                foreach ($data['Entrypoint'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setEntrypoint($values);
@@ -242,14 +242,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mounts', $data)) {
                 $values_1 = [];
-                foreach ($data['Mounts'] as $value_1) {
+                foreach ($data['Mounts'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\PluginMount', 'json', $context);
                 }
                 $object->setMounts($values_1);
             }
             if (array_key_exists('Env', $data)) {
                 $values_2 = [];
-                foreach ($data['Env'] as $value_2) {
+                foreach ($data['Env'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\PluginEnv', 'json', $context);
                 }
                 $object->setEnv($values_2);

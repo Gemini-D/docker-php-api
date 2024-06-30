@@ -67,7 +67,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('PluginPrivilege', $data)) {
                 $values = [];
-                foreach ($data['PluginPrivilege'] as $value) {
+                foreach ($data['PluginPrivilege'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\TaskSpecPluginSpecPluginPrivilegeItem', 'json', $context);
                 }
                 $object->setPluginPrivilege($values);
@@ -149,7 +149,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('PluginPrivilege', $data)) {
                 $values = [];
-                foreach ($data['PluginPrivilege'] as $value) {
+                foreach ($data['PluginPrivilege'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\TaskSpecPluginSpecPluginPrivilegeItem', 'json', $context);
                 }
                 $object->setPluginPrivilege($values);

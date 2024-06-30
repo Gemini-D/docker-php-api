@@ -61,14 +61,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('RepoTags', $data)) {
                 $values = [];
-                foreach ($data['RepoTags'] as $value) {
+                foreach ($data['RepoTags'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setRepoTags($values);
             }
             if (array_key_exists('RepoDigests', $data)) {
                 $values_1 = [];
-                foreach ($data['RepoDigests'] as $value_1) {
+                foreach ($data['RepoDigests'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setRepoDigests($values_1);
@@ -215,14 +215,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('RepoTags', $data)) {
                 $values = [];
-                foreach ($data['RepoTags'] as $value) {
+                foreach ($data['RepoTags'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setRepoTags($values);
             }
             if (array_key_exists('RepoDigests', $data)) {
                 $values_1 = [];
-                foreach ($data['RepoDigests'] as $value_1) {
+                foreach ($data['RepoDigests'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setRepoDigests($values_1);

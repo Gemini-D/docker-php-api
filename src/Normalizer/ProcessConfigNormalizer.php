@@ -70,7 +70,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('arguments', $data)) {
                 $values = [];
-                foreach ($data['arguments'] as $value) {
+                foreach ($data['arguments'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setArguments($values);
@@ -158,7 +158,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('arguments', $data)) {
                 $values = [];
-                foreach ($data['arguments'] as $value) {
+                foreach ($data['arguments'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setArguments($values);

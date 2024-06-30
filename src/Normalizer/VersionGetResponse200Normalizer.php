@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Components', $data)) {
                 $values = [];
-                foreach ($data['Components'] as $value) {
+                foreach ($data['Components'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\VersionGetResponse200ComponentsItem', 'json', $context);
                 }
                 $object->setComponents($values);
@@ -191,7 +191,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Components', $data)) {
                 $values = [];
-                foreach ($data['Components'] as $value) {
+                foreach ($data['Components'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\VersionGetResponse200ComponentsItem', 'json', $context);
                 }
                 $object->setComponents($values);

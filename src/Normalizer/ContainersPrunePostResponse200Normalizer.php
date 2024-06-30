@@ -58,7 +58,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('ContainersDeleted', $data)) {
                 $values = [];
-                foreach ($data['ContainersDeleted'] as $value) {
+                foreach ($data['ContainersDeleted'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setContainersDeleted($values);
@@ -128,7 +128,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('ContainersDeleted', $data)) {
                 $values = [];
-                foreach ($data['ContainersDeleted'] as $value) {
+                foreach ($data['ContainersDeleted'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setContainersDeleted($values);

@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Layers', $data)) {
                 $values = [];
-                foreach ($data['Layers'] as $value) {
+                foreach ($data['Layers'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setLayers($values);
@@ -135,7 +135,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Layers', $data)) {
                 $values = [];
-                foreach ($data['Layers'] as $value) {
+                foreach ($data['Layers'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setLayers($values);

@@ -58,28 +58,28 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mounts', $data)) {
                 $values = [];
-                foreach ($data['Mounts'] as $value) {
+                foreach ($data['Mounts'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\PluginMount', 'json', $context);
                 }
                 $object->setMounts($values);
             }
             if (array_key_exists('Env', $data)) {
                 $values_1 = [];
-                foreach ($data['Env'] as $value_1) {
+                foreach ($data['Env'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setEnv($values_1);
             }
             if (array_key_exists('Args', $data)) {
                 $values_2 = [];
-                foreach ($data['Args'] as $value_2) {
+                foreach ($data['Args'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setArgs($values_2);
             }
             if (array_key_exists('Devices', $data)) {
                 $values_3 = [];
-                foreach ($data['Devices'] as $value_3) {
+                foreach ($data['Devices'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\PluginDevice', 'json', $context);
                 }
                 $object->setDevices($values_3);
@@ -156,28 +156,28 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mounts', $data)) {
                 $values = [];
-                foreach ($data['Mounts'] as $value) {
+                foreach ($data['Mounts'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\PluginMount', 'json', $context);
                 }
                 $object->setMounts($values);
             }
             if (array_key_exists('Env', $data)) {
                 $values_1 = [];
-                foreach ($data['Env'] as $value_1) {
+                foreach ($data['Env'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setEnv($values_1);
             }
             if (array_key_exists('Args', $data)) {
                 $values_2 = [];
-                foreach ($data['Args'] as $value_2) {
+                foreach ($data['Args'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setArgs($values_2);
             }
             if (array_key_exists('Devices', $data)) {
                 $values_3 = [];
-                foreach ($data['Devices'] as $value_3) {
+                foreach ($data['Devices'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\PluginDevice', 'json', $context);
                 }
                 $object->setDevices($values_3);

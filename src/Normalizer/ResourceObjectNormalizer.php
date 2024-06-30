@@ -64,7 +64,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('GenericResources', $data)) {
                 $values = [];
-                foreach ($data['GenericResources'] as $value) {
+                foreach ($data['GenericResources'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\GenericResourcesItem', 'json', $context);
                 }
                 $object->setGenericResources($values);
@@ -140,7 +140,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('GenericResources', $data)) {
                 $values = [];
-                foreach ($data['GenericResources'] as $value) {
+                foreach ($data['GenericResources'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\GenericResourcesItem', 'json', $context);
                 }
                 $object->setGenericResources($values);

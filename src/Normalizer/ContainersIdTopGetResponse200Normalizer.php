@@ -58,16 +58,16 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Titles', $data)) {
                 $values = [];
-                foreach ($data['Titles'] as $value) {
+                foreach ($data['Titles'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setTitles($values);
             }
             if (array_key_exists('Processes', $data)) {
                 $values_1 = [];
-                foreach ($data['Processes'] as $value_1) {
+                foreach ($data['Processes'] ?? [] as $value_1) {
                     $values_2 = [];
-                    foreach ($value_1 as $value_2) {
+                    foreach ($value_1 ?? [] as $value_2) {
                         $values_2[] = $value_2;
                     }
                     $values_1[] = $values_2;
@@ -144,16 +144,16 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Titles', $data)) {
                 $values = [];
-                foreach ($data['Titles'] as $value) {
+                foreach ($data['Titles'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setTitles($values);
             }
             if (array_key_exists('Processes', $data)) {
                 $values_1 = [];
-                foreach ($data['Processes'] as $value_1) {
+                foreach ($data['Processes'] ?? [] as $value_1) {
                     $values_2 = [];
-                    foreach ($value_1 as $value_2) {
+                    foreach ($value_1 ?? [] as $value_2) {
                         $values_2[] = $value_2;
                     }
                     $values_1[] = $values_2;

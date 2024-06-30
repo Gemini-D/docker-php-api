@@ -58,7 +58,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('NetworksDeleted', $data)) {
                 $values = [];
-                foreach ($data['NetworksDeleted'] as $value) {
+                foreach ($data['NetworksDeleted'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setNetworksDeleted($values);
@@ -122,7 +122,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('NetworksDeleted', $data)) {
                 $values = [];
-                foreach ($data['NetworksDeleted'] as $value) {
+                foreach ($data['NetworksDeleted'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setNetworksDeleted($values);

@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Names', $data)) {
                 $values = [];
-                foreach ($data['Names'] as $value) {
+                foreach ($data['Names'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setNames($values);
@@ -80,7 +80,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ports', $data)) {
                 $values_1 = [];
-                foreach ($data['Ports'] as $value_1) {
+                foreach ($data['Ports'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\Port', 'json', $context);
                 }
                 $object->setPorts($values_1);
@@ -93,7 +93,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values_2 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key => $value_2) {
+                foreach ($data['Labels'] ?? [] as $key => $value_2) {
                     if ($value_2 === null) {
                         $values_2[$key] = null;
                         continue;
@@ -116,7 +116,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mounts', $data)) {
                 $values_3 = [];
-                foreach ($data['Mounts'] as $value_3) {
+                foreach ($data['Mounts'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\Mount', 'json', $context);
                 }
                 $object->setMounts($values_3);
@@ -237,7 +237,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Names', $data)) {
                 $values = [];
-                foreach ($data['Names'] as $value) {
+                foreach ($data['Names'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setNames($values);
@@ -256,7 +256,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ports', $data)) {
                 $values_1 = [];
-                foreach ($data['Ports'] as $value_1) {
+                foreach ($data['Ports'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\Port', 'json', $context);
                 }
                 $object->setPorts($values_1);
@@ -269,7 +269,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Labels', $data)) {
                 $values_2 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key => $value_2) {
+                foreach ($data['Labels'] ?? [] as $key => $value_2) {
                     if ($value_2 === null) {
                         $values_2[$key] = null;
                         continue;
@@ -292,7 +292,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Mounts', $data)) {
                 $values_3 = [];
-                foreach ($data['Mounts'] as $value_3) {
+                foreach ($data['Mounts'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\Mount', 'json', $context);
                 }
                 $object->setMounts($values_3);

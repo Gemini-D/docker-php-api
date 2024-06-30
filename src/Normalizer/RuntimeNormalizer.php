@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('runtimeArgs', $data) && $data['runtimeArgs'] !== null) {
                 $values = [];
-                foreach ($data['runtimeArgs'] as $value) {
+                foreach ($data['runtimeArgs'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setRuntimeArgs($values);
@@ -133,7 +133,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('runtimeArgs', $data) && $data['runtimeArgs'] !== null) {
                 $values = [];
-                foreach ($data['runtimeArgs'] as $value) {
+                foreach ($data['runtimeArgs'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setRuntimeArgs($values);

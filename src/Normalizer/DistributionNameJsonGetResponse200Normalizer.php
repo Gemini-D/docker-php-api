@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Platforms', $data)) {
                 $values = [];
-                foreach ($data['Platforms'] as $value) {
+                foreach ($data['Platforms'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\DistributionNameJsonGetResponse200PlatformsItem', 'json', $context);
                 }
                 $object->setPlatforms($values);
@@ -127,7 +127,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Platforms', $data)) {
                 $values = [];
-                foreach ($data['Platforms'] as $value) {
+                foreach ($data['Platforms'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\DistributionNameJsonGetResponse200PlatformsItem', 'json', $context);
                 }
                 $object->setPlatforms($values);

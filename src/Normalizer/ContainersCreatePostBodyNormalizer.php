@@ -76,7 +76,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('ExposedPorts', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['ExposedPorts'] as $key => $value) {
+                foreach ($data['ExposedPorts'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -96,14 +96,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Env', $data)) {
                 $values_1 = [];
-                foreach ($data['Env'] as $value_1) {
+                foreach ($data['Env'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setEnv($values_1);
             }
             if (array_key_exists('Cmd', $data)) {
                 $values_2 = [];
-                foreach ($data['Cmd'] as $value_2) {
+                foreach ($data['Cmd'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setCmd($values_2);
@@ -119,7 +119,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Volumes', $data)) {
                 $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Volumes'] as $key_1 => $value_3) {
+                foreach ($data['Volumes'] ?? [] as $key_1 => $value_3) {
                     if ($value_3 === null) {
                         $values_3[$key_1] = null;
                         continue;
@@ -133,7 +133,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Entrypoint', $data)) {
                 $values_4 = [];
-                foreach ($data['Entrypoint'] as $value_4) {
+                foreach ($data['Entrypoint'] ?? [] as $value_4) {
                     $values_4[] = $value_4;
                 }
                 $object->setEntrypoint($values_4);
@@ -146,14 +146,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('OnBuild', $data)) {
                 $values_5 = [];
-                foreach ($data['OnBuild'] as $value_5) {
+                foreach ($data['OnBuild'] ?? [] as $value_5) {
                     $values_5[] = $value_5;
                 }
                 $object->setOnBuild($values_5);
             }
             if (array_key_exists('Labels', $data)) {
                 $values_6 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key_2 => $value_6) {
+                foreach ($data['Labels'] ?? [] as $key_2 => $value_6) {
                     if ($value_6 === null) {
                         $values_6[$key_2] = null;
                         continue;
@@ -170,7 +170,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Shell', $data)) {
                 $values_7 = [];
-                foreach ($data['Shell'] as $value_7) {
+                foreach ($data['Shell'] ?? [] as $value_7) {
                     $values_7[] = $value_7;
                 }
                 $object->setShell($values_7);
@@ -364,7 +364,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('ExposedPorts', $data)) {
                 $values = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['ExposedPorts'] as $key => $value) {
+                foreach ($data['ExposedPorts'] ?? [] as $key => $value) {
                     if ($value === null) {
                         $values[$key] = null;
                         continue;
@@ -384,14 +384,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Env', $data)) {
                 $values_1 = [];
-                foreach ($data['Env'] as $value_1) {
+                foreach ($data['Env'] ?? [] as $value_1) {
                     $values_1[] = $value_1;
                 }
                 $object->setEnv($values_1);
             }
             if (array_key_exists('Cmd', $data)) {
                 $values_2 = [];
-                foreach ($data['Cmd'] as $value_2) {
+                foreach ($data['Cmd'] ?? [] as $value_2) {
                     $values_2[] = $value_2;
                 }
                 $object->setCmd($values_2);
@@ -407,7 +407,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Volumes', $data)) {
                 $values_3 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Volumes'] as $key_1 => $value_3) {
+                foreach ($data['Volumes'] ?? [] as $key_1 => $value_3) {
                     if ($value_3 === null) {
                         $values_3[$key_1] = null;
                         continue;
@@ -421,7 +421,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Entrypoint', $data)) {
                 $values_4 = [];
-                foreach ($data['Entrypoint'] as $value_4) {
+                foreach ($data['Entrypoint'] ?? [] as $value_4) {
                     $values_4[] = $value_4;
                 }
                 $object->setEntrypoint($values_4);
@@ -434,14 +434,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('OnBuild', $data)) {
                 $values_5 = [];
-                foreach ($data['OnBuild'] as $value_5) {
+                foreach ($data['OnBuild'] ?? [] as $value_5) {
                     $values_5[] = $value_5;
                 }
                 $object->setOnBuild($values_5);
             }
             if (array_key_exists('Labels', $data)) {
                 $values_6 = new ArrayObject([], ArrayObject::ARRAY_AS_PROPS);
-                foreach ($data['Labels'] as $key_2 => $value_6) {
+                foreach ($data['Labels'] ?? [] as $key_2 => $value_6) {
                     if ($value_6 === null) {
                         $values_6[$key_2] = null;
                         continue;
@@ -458,7 +458,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Shell', $data)) {
                 $values_7 = [];
-                foreach ($data['Shell'] as $value_7) {
+                foreach ($data['Shell'] ?? [] as $value_7) {
                     $values_7[] = $value_7;
                 }
                 $object->setShell($values_7);

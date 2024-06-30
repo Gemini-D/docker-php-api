@@ -100,6 +100,7 @@ class ArrayType extends Type
             new Stmt\Expression(new Expr\Assign($this->createLoopOutputAssignement($valuesVar, $loopKeyVar), $outputExpr)),
         ]);
 
+        $input = new Expr\BinaryOp\Coalesce($input, new Expr\Array_());
         $statements[] = new Stmt\Foreach_($input, $loopValueVar, [
             'keyVar' => $loopKeyVar,
             'stmts' => $loopStatements,

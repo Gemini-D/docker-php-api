@@ -61,7 +61,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Warnings', $data)) {
                 $values = [];
-                foreach ($data['Warnings'] as $value) {
+                foreach ($data['Warnings'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setWarnings($values);
@@ -127,7 +127,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Warnings', $data)) {
                 $values = [];
-                foreach ($data['Warnings'] as $value) {
+                foreach ($data['Warnings'] ?? [] as $value) {
                     $values[] = $value;
                 }
                 $object->setWarnings($values);

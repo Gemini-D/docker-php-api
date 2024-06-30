@@ -70,35 +70,35 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('BlkioWeightDevice', $data)) {
                 $values = [];
-                foreach ($data['BlkioWeightDevice'] as $value) {
+                foreach ($data['BlkioWeightDevice'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\ResourcesBlkioWeightDeviceItem', 'json', $context);
                 }
                 $object->setBlkioWeightDevice($values);
             }
             if (array_key_exists('BlkioDeviceReadBps', $data)) {
                 $values_1 = [];
-                foreach ($data['BlkioDeviceReadBps'] as $value_1) {
+                foreach ($data['BlkioDeviceReadBps'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceReadBps($values_1);
             }
             if (array_key_exists('BlkioDeviceWriteBps', $data)) {
                 $values_2 = [];
-                foreach ($data['BlkioDeviceWriteBps'] as $value_2) {
+                foreach ($data['BlkioDeviceWriteBps'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceWriteBps($values_2);
             }
             if (array_key_exists('BlkioDeviceReadIOps', $data)) {
                 $values_3 = [];
-                foreach ($data['BlkioDeviceReadIOps'] as $value_3) {
+                foreach ($data['BlkioDeviceReadIOps'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceReadIOps($values_3);
             }
             if (array_key_exists('BlkioDeviceWriteIOps', $data)) {
                 $values_4 = [];
-                foreach ($data['BlkioDeviceWriteIOps'] as $value_4) {
+                foreach ($data['BlkioDeviceWriteIOps'] ?? [] as $value_4) {
                     $values_4[] = $this->denormalizer->denormalize($value_4, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceWriteIOps($values_4);
@@ -123,14 +123,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Devices', $data)) {
                 $values_5 = [];
-                foreach ($data['Devices'] as $value_5) {
+                foreach ($data['Devices'] ?? [] as $value_5) {
                     $values_5[] = $this->denormalizer->denormalize($value_5, 'Docker\API\Model\DeviceMapping', 'json', $context);
                 }
                 $object->setDevices($values_5);
             }
             if (array_key_exists('DeviceCgroupRules', $data)) {
                 $values_6 = [];
-                foreach ($data['DeviceCgroupRules'] as $value_6) {
+                foreach ($data['DeviceCgroupRules'] ?? [] as $value_6) {
                     $values_6[] = $value_6;
                 }
                 $object->setDeviceCgroupRules($values_6);
@@ -161,7 +161,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ulimits', $data)) {
                 $values_7 = [];
-                foreach ($data['Ulimits'] as $value_7) {
+                foreach ($data['Ulimits'] ?? [] as $value_7) {
                     $values_7[] = $this->denormalizer->denormalize($value_7, 'Docker\API\Model\ResourcesUlimitsItem', 'json', $context);
                 }
                 $object->setUlimits($values_7);
@@ -364,35 +364,35 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('BlkioWeightDevice', $data)) {
                 $values = [];
-                foreach ($data['BlkioWeightDevice'] as $value) {
+                foreach ($data['BlkioWeightDevice'] ?? [] as $value) {
                     $values[] = $this->denormalizer->denormalize($value, 'Docker\API\Model\ResourcesBlkioWeightDeviceItem', 'json', $context);
                 }
                 $object->setBlkioWeightDevice($values);
             }
             if (array_key_exists('BlkioDeviceReadBps', $data)) {
                 $values_1 = [];
-                foreach ($data['BlkioDeviceReadBps'] as $value_1) {
+                foreach ($data['BlkioDeviceReadBps'] ?? [] as $value_1) {
                     $values_1[] = $this->denormalizer->denormalize($value_1, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceReadBps($values_1);
             }
             if (array_key_exists('BlkioDeviceWriteBps', $data)) {
                 $values_2 = [];
-                foreach ($data['BlkioDeviceWriteBps'] as $value_2) {
+                foreach ($data['BlkioDeviceWriteBps'] ?? [] as $value_2) {
                     $values_2[] = $this->denormalizer->denormalize($value_2, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceWriteBps($values_2);
             }
             if (array_key_exists('BlkioDeviceReadIOps', $data)) {
                 $values_3 = [];
-                foreach ($data['BlkioDeviceReadIOps'] as $value_3) {
+                foreach ($data['BlkioDeviceReadIOps'] ?? [] as $value_3) {
                     $values_3[] = $this->denormalizer->denormalize($value_3, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceReadIOps($values_3);
             }
             if (array_key_exists('BlkioDeviceWriteIOps', $data)) {
                 $values_4 = [];
-                foreach ($data['BlkioDeviceWriteIOps'] as $value_4) {
+                foreach ($data['BlkioDeviceWriteIOps'] ?? [] as $value_4) {
                     $values_4[] = $this->denormalizer->denormalize($value_4, 'Docker\API\Model\ThrottleDevice', 'json', $context);
                 }
                 $object->setBlkioDeviceWriteIOps($values_4);
@@ -417,14 +417,14 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Devices', $data)) {
                 $values_5 = [];
-                foreach ($data['Devices'] as $value_5) {
+                foreach ($data['Devices'] ?? [] as $value_5) {
                     $values_5[] = $this->denormalizer->denormalize($value_5, 'Docker\API\Model\DeviceMapping', 'json', $context);
                 }
                 $object->setDevices($values_5);
             }
             if (array_key_exists('DeviceCgroupRules', $data)) {
                 $values_6 = [];
-                foreach ($data['DeviceCgroupRules'] as $value_6) {
+                foreach ($data['DeviceCgroupRules'] ?? [] as $value_6) {
                     $values_6[] = $value_6;
                 }
                 $object->setDeviceCgroupRules($values_6);
@@ -455,7 +455,7 @@ if (! class_exists(Kernel::class) or (Kernel::MAJOR_VERSION >= 7 or Kernel::MAJO
             }
             if (array_key_exists('Ulimits', $data)) {
                 $values_7 = [];
-                foreach ($data['Ulimits'] as $value_7) {
+                foreach ($data['Ulimits'] ?? [] as $value_7) {
                     $values_7[] = $this->denormalizer->denormalize($value_7, 'Docker\API\Model\ResourcesUlimitsItem', 'json', $context);
                 }
                 $object->setUlimits($values_7);
